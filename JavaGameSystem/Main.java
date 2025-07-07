@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 import JavaGameSystem.NPCs.NPC;
 import JavaGameSystem.Player.Player;
-import JavaGameSystem.Items.Weapon;
 
 public class Main {
     public static void main(String[] args) {
@@ -60,6 +59,15 @@ public class Main {
         System.out.println("Health: " + Player1.getPlayerHealth());
 
         NPC Walter = new NPC();
+        Walter.setNpcname("Walter");
+        Walter.setNpchealth(50);
+        Walter.setNpcdamage(0);
+        Walter.setHostile(false);
+        Walter.setInteractive(true);
+        Walter.setUnique(true);
+
+        System.out.println("This is" + Walter.getNpcname() + ".");
+        System.out.println("He has " + Walter.getNpchealth() + "HP and does " + Walter.getNpcdamage() + "damage.");
 
         Input.close();
     }
