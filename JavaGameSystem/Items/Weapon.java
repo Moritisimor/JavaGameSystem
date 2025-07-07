@@ -1,18 +1,39 @@
 package JavaGameSystem.Items;
 
 public class Weapon extends Item {
-    String type;
-    String enchantment;
-    Integer damage;
-    Boolean ranged;
+    private String type;
+    private String enchantment;
+    private Integer damage;
+    private Boolean ranged;
 
-    public Weapon(String name, String rarity, String type, String enchantment, Integer damage, Integer durability, Boolean ranged) {
-        this.itemname = name;
-        this.rarity = rarity;
+    // GETTER SETTER REGION
+
+    public void setType(String type) {
         this.type = type;
+    }
+    public void setEnchantment(String enchantment) {
         this.enchantment = enchantment;
+    }
+    public void setDamage(Integer damage) {
         this.damage = damage;
-        this.durability = durability;
+    }
+    public void setRanged(Boolean ranged) {
         this.ranged = ranged;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public String getEnchantment() {
+        return enchantment;
+    }
+
+    public Integer getDamage() {
+        return damage;
+    }
+
+    public Boolean getRanged() {
+        return ranged;
     }
 }

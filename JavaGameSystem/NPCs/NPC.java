@@ -21,37 +21,25 @@ public class NPC {
         }
     }
 
-    public NPC(String name, Integer health, Integer damage, Boolean hostile, Boolean interactive, Boolean unique) {
-        this.npcname = name;
-        this.npchealth = health;
-        this.npcdamage = damage; 
-        this.hostile = hostile;
-        this.interactive = interactive;
-        this.unique = unique;
-    }
-
-    public void info() {
+    public void ShowInfo() {
         System.out.println("Name: " + npcname);
         System.out.println("Health: " + npchealth);
         System.out.println("Damage: " + npcdamage);
         if (hostile) {
             System.out.println("Hostile");
-        }
-        else {
+        } else {
             System.out.println("Docile");
         }
 
         if (interactive) {
             System.out.println("Interactive");
-        }
-        else {
+        } else {
             System.out.println("Not Interactive");
         }
         
         if (unique) {
             System.out.println("Unique");
-        }
-        else {
+        } else {
             System.out.println("Not Unique");
         }
     }

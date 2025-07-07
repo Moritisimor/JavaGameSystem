@@ -2,7 +2,10 @@ package JavaGameSystem;
 
 import java.util.List;
 import java.util.Scanner;
+
+import JavaGameSystem.NPCs.NPC;
 import JavaGameSystem.Player.Player;
+import JavaGameSystem.Items.Weapon;
 
 public class Main {
     public static void main(String[] args) {
@@ -25,7 +28,7 @@ public class Main {
             System.out.println("-" + i);
         }
         while (true) {
-            System.out.println("Select a class: ");
+            System.out.print("Select a class: ");
             String playerClass = Input.nextLine();
             if (availableClassesList.contains(playerClass)) {
                 Player1.setPlayerClass(playerClass);
@@ -55,6 +58,9 @@ public class Main {
         System.out.println("Class: " + Player1.getPlayerClass());
         System.out.println("Equipped Weapon: " + Player1.getEquippedWeapon());
         System.out.println("Health: " + Player1.getPlayerHealth());
+
+        NPC Walter = new NPC();
+
         Input.close();
     }
 }
